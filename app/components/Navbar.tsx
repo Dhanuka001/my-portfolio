@@ -24,8 +24,8 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-0 w-full z-50 bg-white dark:bg-gray-900 shadow-sm">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <nav className="fixed top-2 w-full z-50 bg-white dark:bg-gray-900">
+        <div className="max-w-7xl mx-auto px-12 py-4 flex justify-between items-center">
           {/* Logo */}
           <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">
             Dhanuka's Portfolio
