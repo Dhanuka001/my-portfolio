@@ -10,9 +10,8 @@ import { useInView } from 'react-intersection-observer';
 import WhatsAppButton from './WhatsappButton';
 
 const Hero = () => {
-
   const { ref, inView } = useInView({
-    threshold: 0.5, // 50% of Hero in viewport
+    threshold: 0.5,
   });
 
   const [text] = useTypewriter({
@@ -31,7 +30,7 @@ const Hero = () => {
     if (aboutSection) {
       aboutSection.scrollIntoView({ behavior: 'smooth' });
     }
-    setTimeout(() => setIsClicked(false), 1000); 
+    setTimeout(() => setIsClicked(false), 1000);
   };
 
   return (
@@ -67,7 +66,8 @@ const Hero = () => {
         }`}
       >
         {text}
-        <Cursor />
+        {/* ✅ Conditional rendering to avoid Cursor sticking/duplication */}
+        {text && <Cursor />}
       </h2>
 
       {/* Paragraph */}
@@ -78,17 +78,17 @@ const Hero = () => {
 
       {/* Buttons */}
       <div className="mt-6 flex flex-col sm:flex-row items-center gap-4">
-      <button
-        onClick={() => {
-          const projectsSection = document.getElementById('projects');
-          if (projectsSection) {
-            projectsSection.scrollIntoView({ behavior: 'smooth' });
-          }
-        }}
-        className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg shadow hover:scale-105 transition"
-      >
-        View My Work
-      </button>
+        <button
+          onClick={() => {
+            const projectsSection = document.getElementById('projects');
+            if (projectsSection) {
+              projectsSection.scrollIntoView({ behavior: 'smooth' });
+            }
+          }}
+          className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg shadow hover:scale-105 transition"
+        >
+          View My Work
+        </button>
 
         <button className="border px-6 py-2 rounded-lg text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition">
           Download CV
@@ -115,8 +115,8 @@ const Hero = () => {
           />
         </div>
       </div>
-        {inView && <WhatsAppButton />}
 
+      {inView && <WhatsAppButton />}
     </section>
   );
 };
