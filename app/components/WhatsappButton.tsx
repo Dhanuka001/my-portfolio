@@ -5,7 +5,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 
 const WhatsAppButton: React.FC = () => {
   return (
-    <div className="fixed bottom-15 right-15 z-50">
+    <div className="fixed bottom-8 sm:bottom-15  right-5 sm:right-15 z-50">
       <div className="relative w-12 h-12">
         {/* Pulse Circle Animation */}
         <span className="absolute inset-0 rounded-full bg-green-500 opacity-75 animate-ping animation-duration-[3s]"></span>
