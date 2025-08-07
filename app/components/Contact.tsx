@@ -1,14 +1,18 @@
 'use client';
 
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Send } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { Mail, Phone, MapPin, Github, Linkedin, Send } from 'lucide-react';
+import { motion, Variants } from 'framer-motion';
 
-const fadeInUp = {
+const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 40 },
   visible: (i = 1) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.2, duration: 0.6, ease: 'easeOut' }
+    transition: {
+      delay: i * 0.2,
+      duration: 0.6,
+      ease: [0.25, 0.1, 0.25, 1], // Correct easing value
+    },
   }),
 };
 
@@ -24,6 +28,7 @@ const Contact = () => {
       >
         Let&apos;s Work Together
       </motion.h2>
+
       <motion.p
         className="text-center max-w-2xl mx-auto text-gray-600 dark:text-gray-300 mb-16"
         initial="hidden"
@@ -37,7 +42,7 @@ const Contact = () => {
 
       {/* Content */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-        {/* Left - Contact Info */}
+        {/* Contact Info */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -93,7 +98,7 @@ const Contact = () => {
           </div>
         </motion.div>
 
-        {/* Right - Form */}
+        {/* Form */}
         <motion.form
           action="#"
           method="POST"

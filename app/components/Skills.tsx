@@ -1,9 +1,21 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import React from 'react';
+import { motion, Variants } from 'framer-motion';
 import { Code, Server, Settings, Paintbrush } from 'lucide-react';
 
-const skillCategories = [
+type Skill = {
+  name: string;
+  level: number;
+};
+
+type Category = {
+  title: string;
+  icon: React.ReactElement;
+  skills: Skill[];
+};
+
+const skillCategories: Category[] = [
   {
     title: 'Frontend',
     icon: <Code className="text-blue-500" />,
@@ -16,7 +28,7 @@ const skillCategories = [
       { name: 'CSS3', level: 95 },
       { name: 'Tailwind CSS', level: 92 },
       { name: 'Sass', level: 85 },
-    ]
+    ],
   },
   {
     title: 'Backend',
@@ -26,7 +38,7 @@ const skillCategories = [
       { name: 'Express.js', level: 75 },
       { name: 'MongoDB', level: 70 },
       { name: 'PostgreSQL', level: 65 },
-    ]
+    ],
   },
   {
     title: 'Tools',
@@ -36,7 +48,7 @@ const skillCategories = [
       { name: 'Webpack', level: 75 },
       { name: 'Vite', level: 85 },
       { name: 'Docker', level: 60 },
-    ]
+    ],
   },
   {
     title: 'Design',
@@ -45,11 +57,11 @@ const skillCategories = [
       { name: 'Figma', level: 85 },
       { name: 'Adobe XD', level: 75 },
       { name: 'Photoshop', level: 70 },
-    ]
+    ],
   },
 ];
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: (i = 1) => ({
     opacity: 1,
@@ -57,7 +69,7 @@ const fadeUp = {
     transition: {
       delay: i * 0.2,
       duration: 0.6,
-      ease: 'easeOut',
+      ease: [0.25, 0.1, 0.25, 1], // Valid easing curve
     },
   }),
 };
@@ -99,7 +111,7 @@ const Skills = () => {
             </h4>
             <ul className="space-y-4">
               {category.skills.map((skill, i) => (
-                <li key={i} className="">
+                <li key={i}>
                   <div className="flex justify-between mb-1 text-sm font-medium text-gray-700 dark:text-gray-300">
                     <span>{skill.name}</span>
                     <span>{skill.level}%</span>
