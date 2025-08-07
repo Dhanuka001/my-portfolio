@@ -6,8 +6,15 @@ import profileImg from '@/public/profile_image.jpg';
 import AnimatedBlur from './AnimatedBlur';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import { useState } from 'react';
+import { useInView } from 'react-intersection-observer';
+import WhatsAppButton from './WhatsappButton';
 
 const Hero = () => {
+
+  const { ref, inView } = useInView({
+    threshold: 0.5, // 50% of Hero in viewport
+  });
+
   const [text] = useTypewriter({
     words: ['Frontend Developer'],
     typeSpeed: 90,
@@ -29,6 +36,7 @@ const Hero = () => {
 
   return (
     <section
+      ref={ref}
       id="home"
       className="scroll-mt-20 relative flex flex-col items-center justify-center text-center pt-2 px-8 sm:px-10 min-h-screen"
     >
@@ -89,9 +97,9 @@ const Hero = () => {
 
       {/* Social Icons */}
       <div className="mt-6 flex items-center gap-6 text-gray-700 dark:text-gray-300">
-        <Github className="w-6 h-6 cursor-pointer hover:text-blue-500" />
-        <Linkedin className="w-6 h-6 cursor-pointer hover:text-blue-500" />
-        <Mail className="w-6 h-6 cursor-pointer hover:text-blue-500" />
+        <a href="https://github.com/Dhanuka001"><Github className="w-6 h-6 cursor-pointer hover:text-blue-500" /></a>
+        <a href="https://www.linkedin.com/in/dhanuka-rathnayaka1/"><Linkedin className="w-6 h-6 cursor-pointer hover:text-blue-500" /></a>
+        <a href="mailto:lohandanuka@gmail.com"><Mail className="w-6 h-6 cursor-pointer hover:text-blue-500" /></a>
       </div>
 
       {/* Scroll Arrow */}
@@ -107,6 +115,8 @@ const Hero = () => {
           />
         </div>
       </div>
+        {inView && <WhatsAppButton />}
+
     </section>
   );
 };
