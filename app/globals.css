@@ -76,3 +76,22 @@ body {
 .animate-pulse-text {
   animation: pulse-text 4s ease-in-out infinite;
 }
+
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #3b82f6, #8b5cf6); 
+  border-radius: 0px; /* no rounding */
+}
+
+/* Optional: Smooth scrollbar corner */
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
