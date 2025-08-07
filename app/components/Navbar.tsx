@@ -24,11 +24,11 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-0 w-full z-50 bg-white dark:bg-gray-900">
-        <div className="max-w-7xl mx-auto px-12 py-8 flex justify-between items-center">
+      <nav className="fixed top-0 w-full z-50 bg-white dark:bg-gray-900 shadow">
+        <div className="max-w-7xl mx-auto px-6 sm:px-12 py-4 flex justify-between items-center">
           {/* Logo */}
           <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">
-            Dhanuka's Portfolio
+            Dhanuka&apos;s Portfolio
           </div>
 
           {/* Desktop Nav */}
@@ -37,7 +37,7 @@ const Navbar = () => {
               <Link
                 key={link.label}
                 href={link.href}
-                className="text-gray-600 dark:text-gray-300 text-[15px] font-[510] hover:text-blue-500 transition"
+                className="text-gray-600 dark:text-gray-300 text-sm font-medium hover:text-blue-500 transition"
               >
                 {link.label}
               </Link>
@@ -52,7 +52,7 @@ const Navbar = () => {
             )}
           </div>
 
-          {/* Mobile toggle */}
+          {/* Mobile Toggle */}
           <div className="md:hidden flex items-center space-x-2">
             {mounted && (
               <button
@@ -65,6 +65,7 @@ const Navbar = () => {
             <button
               onClick={() => setMenuOpen(!menuOpen)}
               className="text-2xl text-gray-800 dark:text-white"
+              aria-label="Toggle Menu"
             >
               {menuOpen ? '✕' : '☰'}
             </button>
@@ -74,7 +75,7 @@ const Navbar = () => {
 
       {/* Mobile Nav */}
       {menuOpen && (
-        <div className="fixed top-16 left-0 w-full z-40 bg-white dark:bg-gray-900 shadow-md md:hidden">
+        <div className="fixed top-17 left-0 w-full z-40 bg-white dark:bg-gray-900 shadow-md md:hidden">
           <div className="flex flex-col px-6 py-4 space-y-2">
             {navLinks.map((link) => (
               <Link

@@ -14,7 +14,7 @@ const fadeInUp = {
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-36 px-10 sm:px-10 max-w-6xl mx-auto">
+    <section id="contact" className="py-36 px-6 sm:px-10 max-w-6xl mx-auto">
       {/* Header */}
       <motion.h2
         className="text-4xl font-bold text-center text-purple-600 mb-4"
@@ -22,7 +22,7 @@ const Contact = () => {
         whileInView="visible"
         variants={fadeInUp}
       >
-        Let's Work Together
+        Let&apos;s Work Together
       </motion.h2>
       <motion.p
         className="text-center max-w-2xl mx-auto text-gray-600 dark:text-gray-300 mb-16"
@@ -31,8 +31,8 @@ const Contact = () => {
         variants={fadeInUp}
         custom={1}
       >
-        I'm always interested in hearing about new opportunities and exciting projects.
-        Whether you're a company looking to hire or a fellow developer, let's connect!
+        I&apos;m always interested in hearing about new opportunities and exciting projects.
+        Whether you&apos;re a company looking to hire or a fellow developer, let&apos;s connect!
       </motion.p>
 
       {/* Content */}
@@ -48,16 +48,16 @@ const Contact = () => {
           <h3 className="text-lg font-semibold mb-4">Get in Touch</h3>
           <div className="space-y-4 text-gray-700 dark:text-gray-300">
             <div className="flex items-center gap-3">
-              <Mail className="w-5 h-5 text-purple-600" />
+              <Mail className="w-5 h-5 text-purple-600" aria-label="Email" />
               <span>lohandanuka@gmail.com</span>
             </div>
             <div className="flex items-center gap-3">
-              <Phone className="w-5 h-5 text-purple-600" />
+              <Phone className="w-5 h-5 text-purple-600" aria-label="Phone" />
               <span>+94 71 661 0705</span>
             </div>
             <div className="flex items-center gap-3">
-              <MapPin className="w-5 h-5 text-purple-600" />
-              <span>Malabe,Srilanka</span>
+              <MapPin className="w-5 h-5 text-purple-600" aria-label="Location" />
+              <span>Malabe, Sri Lanka</span>
             </div>
           </div>
 
@@ -65,15 +65,38 @@ const Contact = () => {
           <div className="mt-6">
             <p className="text-sm text-gray-500 mb-2">Follow me on social media</p>
             <div className="flex gap-4 text-gray-600 dark:text-gray-400">
-              <a href="https://github.com/Dhanuka001"><Github className="w-5 h-5 hover:text-purple-600 cursor-pointer" /></a>
-              <a href="https://www.linkedin.com/in/dhanuka-rathnayaka1/"><Linkedin className="w-5 h-5 hover:text-purple-600 cursor-pointer" /></a>
-              <a href="mailto:lohandanuka@"><Mail className="w-5 h-5 hover:text-purple-600 cursor-pointer" /></a>
+              <a
+                href="https://github.com/Dhanuka001"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              >
+                <Github className="w-5 h-5 hover:text-purple-600 cursor-pointer" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/dhanuka-rathnayaka1/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-5 h-5 hover:text-purple-600 cursor-pointer" />
+              </a>
+              <a
+                href="mailto:lohandanuka@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Email"
+              >
+                <Mail className="w-5 h-5 hover:text-purple-600 cursor-pointer" />
+              </a>
             </div>
           </div>
         </motion.div>
 
         {/* Right - Form */}
         <motion.form
+          action="#"
+          method="POST"
           initial="hidden"
           whileInView="visible"
           variants={fadeInUp}

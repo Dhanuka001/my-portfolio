@@ -5,7 +5,7 @@ import { Briefcase, GraduationCap, CalendarDays } from 'lucide-react';
 
 const About = () => {
   return (
-    <section id="about" className="py-42 px-10 sm:px-8 max-w-6xl mx-auto">
+    <section id="about" className="py-36 px-6 sm:px-8 max-w-6xl mx-auto">
       {/* Section Heading */}
       <motion.h2
         className="text-4xl font-bold text-center mb-8 text-purple-600"
@@ -23,7 +23,10 @@ const About = () => {
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.6 }}
       >
-        I'm a passionate frontend developer who recently completed a hands-on internship building real-world applications. I enjoy crafting intuitive UIs using modern tech stacks, and I’m currently completing my degree in IT at SLIIT. I love turning ideas into fast, accessible, and responsive experiences.
+        I&apos;m a passionate frontend developer who recently completed a hands-on internship
+        building real-world applications. I enjoy crafting intuitive UIs using modern tech stacks,
+        and I&apos;m currently completing my degree in IT at SLIIT. I love turning ideas into fast,
+        accessible, and responsive experiences.
       </motion.p>
 
       {/* Experience and Education Cards */}
@@ -95,7 +98,7 @@ const About = () => {
                 Pursuing a comprehensive curriculum that covers core areas of software development,
                 database management, cloud computing, and modern web technologies. This degree program
                 emphasizes both theoretical knowledge and hands-on experience, enabling me to design
-                and build scalable applications. I've also been involved in project-based learning,
+                and build scalable applications. I&apos;ve also been involved in project-based learning,
                 collaborative assignments, and ongoing research to stay up to date with industry standards.
               </p>
             </div>
