@@ -14,7 +14,7 @@ const fadeInUp = {
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-36 px-6 sm:px-10 max-w-6xl mx-auto">
+    <section id="contact" className="py-36 px-10 sm:px-10 max-w-6xl mx-auto">
       {/* Header */}
       <motion.h2
         className="text-4xl font-bold text-center text-purple-600 mb-4"
@@ -65,9 +65,9 @@ const Contact = () => {
           <div className="mt-6">
             <p className="text-sm text-gray-500 mb-2">Follow me on social media</p>
             <div className="flex gap-4 text-gray-600 dark:text-gray-400">
-              <Github className="w-5 h-5 hover:text-purple-600 cursor-pointer" />
-              <Linkedin className="w-5 h-5 hover:text-purple-600 cursor-pointer" />
-              <Twitter className="w-5 h-5 hover:text-purple-600 cursor-pointer" />
+              <a href="https://github.com/Dhanuka001"><Github className="w-5 h-5 hover:text-purple-600 cursor-pointer" /></a>
+              <a href="https://www.linkedin.com/in/dhanuka-rathnayaka1/"><Linkedin className="w-5 h-5 hover:text-purple-600 cursor-pointer" /></a>
+              <a href="mailto:lohandanuka@"><Mail className="w-5 h-5 hover:text-purple-600 cursor-pointer" /></a>
             </div>
           </div>
         </motion.div>
