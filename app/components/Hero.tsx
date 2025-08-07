@@ -37,7 +37,7 @@ const Hero = () => {
     <section
       ref={ref}
       id="home"
-      className="scroll-mt-20 relative flex flex-col items-center justify-center text-center pt-2 px-8 sm:px-10 min-h-screen"
+      className="scroll-mt-20 h-screen relative flex flex-col items-center justify-center text-center pt-2 px-8 sm:px-10 min-h-screen"
     >
       <AnimatedBlur />
 
@@ -53,7 +53,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mt-6">
+      <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mt-3 sm:mt-6">
         Dhanuka Rathnayaka
       </h1>
 
@@ -91,7 +91,7 @@ const Hero = () => {
         <a href="mailto:lohandanuka@gmail.com"><Mail className="w-6 h-6 cursor-pointer hover:text-blue-500" /></a>
       </div>
 
-      <div className="mt-20 animate-bounce">
+      <div className="mt-5 sm:mt-20 animate-bounce">
         <div
           onClick={handleScrollClick}
           className="p-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition duration-300 cursor-pointer"

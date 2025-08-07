@@ -37,7 +37,7 @@ export default function RootLayout({
       <body className={`${poppins.className} ${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <Navbar />
-          <main className="pt-24">{children}</main>
+          <main className="pt-24 overflow-x-hidden">{children}</main>
         </ThemeProvider>
       </body>
     </html>
