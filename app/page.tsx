@@ -6,6 +6,7 @@ import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+import WhatsAppButton from "./components/WhatsappButton";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Contact/>
       <Footer/>
       <ScrollToTop/>
+
     </div>
   );
 }
