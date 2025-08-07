@@ -119,6 +119,24 @@ const Projects = () => {
           <ProjectCard key={index} project={project} index={index} />
         ))}
       </div>
+
+      <motion.div
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.4, duration: 0.6 }}
+  className="mt-12 flex justify-center"
+>
+  <a
+    href="https://github.com/Dhanuka001" 
+    target="_blank"
+    rel="noopener noreferrer"
+    className="group bg-white dark:bg-gray-800 text-sm px-4 py-2 rounded shadow hover:scale-105 transition-transform flex items-center gap-2 border border-gray-300 dark:border-gray-700"
+  >
+    <Github className="w-5 h-5 transition-transform duration-500 group-hover:rotate-[360deg] group-hover:scale-110" />
+    See My All Works
+  </a>
+</motion.div>
+
     </section>
   );
 };
