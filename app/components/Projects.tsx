@@ -15,6 +15,14 @@ type Project = {
 
 const projects: Project[] = [
   {
+    title: 'ResumeAI',
+    description: 'An interactive Next.js web app that analyzes resumes using AI, providing real-time insights and job-match scoring with a sleek, responsive UI. Built with Framer Motion animations and optimized for a seamless user experience.',
+    image: '/projects/resume.png',
+    tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer motion'],
+    demo: 'https://resume-ai-vhcc.vercel.app/',
+    code: 'https://github.com/Dhanuka001/resume-ai',
+  },
+  {
     title: 'E-Commerce Dashboard',
     description: 'Admin dashboard for managing e-commerce operations with real-time analytics.',
     image: '/projects/ecommerce.png',
