@@ -80,9 +80,13 @@ const Hero = () => {
           View My Work
         </button>
 
-        <button className="border px-6 py-2 rounded-lg text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+        <a
+          href="/Dhanuka%202025.pdf"
+          download
+          className="border px-6 py-2 rounded-lg text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition"
+        >
           Download CV
-        </button>
+        </a>
       </div>
 
       <div className="mt-6 flex items-center gap-6 text-gray-700 dark:text-gray-300">
